@@ -1,0 +1,160 @@
+body{
+  background: #111312
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  width: 710px;
+  margin: 0 auto 0 auto;
+}
+
+nav{
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 1;
+  width: 750px;   
+  align-items: center;
+  height: 50px;
+  font-size: 1.7em;
+  margin-left:-20px;
+  background: black;
+/*	background:
+		linear-gradient(135deg, transparent 5px, #BAC4BD 0),
+		linear-gradient(225deg, transparent 5px, #BAC4BD 0) top right,
+		linear-gradient(315deg, transparent 5px, #BAC4BD 0) bottom right,
+		linear-gradient(45deg,  transparent 5px, #BAC4BD 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;*/
+}
+
+a{
+  margin: 0 10px 0 10px;
+  color: #BAC4BD;
+  text-decoration: none;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+
+main{
+  width: 310px;
+  background: #BAC4BD;
+}
+
+aside{
+  width: 400px;
+  background: #BAC4BD;
+}
+
+
+blockquote{
+  font-size: 43px;
+  color: #BAC4BD;
+  background: #111412;
+  margin: 0;
+  padding: 35px 50px 50px 50px;
+  position: relative;
+}
+
+blockquote::before{
+  font-size: 100px;
+  content: '“';
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.hi{  
+  background-image: url('https://cdnb.artstation.com/p/assets/images/images/013/950/987/large/matt-wessel-4989d6ee-8bd4-401b-8384-045749b02d30.jpg?1541790094');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.q1, .q1r, .hir{
+    padding-top: 130px;
+}
+
+.q2{
+  margin-top:30px;
+}
+
+.qx{
+
+  width: 180px;
+  border-right: 120px solid #111412;
+ }
+
+.hi, .hir{  
+  margin-top: -10px;
+}
+
+h1, h2{
+  position: relative;
+  top: 80%;
+  left: 5%;
+  margin: 0;
+  transform: rotateY(180deg);
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, p{
+  color: #111412;
+}
+
+h1{
+  font-size: 4em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+blockquote, h1, h2{
+  font-family: 'Abril Fatface', cursive;
+}
+
+h3, h4, p, li,a{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h5{
+  font-family: 'Merriweather', serif;
+  margin-top: -25px;
+}
+
+p, h4{
+  line-height: 125%;
+}
+
+h3{
+  text-transform: uppercase;
+  margin-top:50px;
+}
+
+h4{
+  font-size: 20px;   
+}  
+
+h3, h4, h5, p{
+  margin-left:  15px;
+  margin-right: 35px;
+}
+
+li{
+  line-height: 150%;
+}
+
+ul{
+  margin-top: -10px;
+}  
+
+div{
+  background: white;
+  width: 710px;
+  height:10px;
+  border: solid black 2px;
+}
