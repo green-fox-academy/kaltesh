@@ -123,34 +123,40 @@ public class day5 {
 // *******
 //
 // The pyramid should have as many lines as the number was
-    int pyramidNumber = 4;
+//    int pyramidNumber = 6;
 //    Scanner scanner = new Scanner(System.in);
 //    System.out.println("pyramidy number plez:");
 //    int pyramidNumber = scanner.nextInt();
-    for (int i = 0; i <= pyramidNumber - 1; i++) {
-      for (int k = pyramidNumber; k > i; k--) {
-        System.out.print(" ");
-      }
-      for (int j = 0; j <= i; j++) {
-        System.out.print("*");
-      }
-      for (int l = 1; l <= i; l++) {
-        System.out.print("*");
-      }
-      System.out.println();
-    }
-    for (int i = 0; i <= pyramidNumber - 1; i++) {
-      for (int k = 0; k <= i; k++) {
-        System.out.print(" ");
-      }
-      for (int j = pyramidNumber; j > i; j--) {
-        System.out.print("*");
-      }
-      for (int l = pyramidNumber - 1; l > i; l--) {
-        System.out.print("*");
-      }
-      System.out.println();
-    }
+//    for (int i = 0; i <= pyramidNumber - 1; i++) {
+//      for (int k = pyramidNumber; k > i; k--) {
+//        System.out.print(" ");
+//      }
+//      for (int j = 0; j <= i; j++) {
+//        System.out.print("*");
+//      }
+//      for (int l = 1; l <= i; l++) {
+//        System.out.print("*");
+//      }
+//      System.out.println();
+//    }
+//    for (int i = 1; i <= pyramidNumber - 1; i++) {
+//      for (int k = 0; k <= i; k++) {
+//        System.out.print(" ");
+//      }
+//      for (int j = pyramidNumber; j > i; j--) {
+//        System.out.print("*");
+//      }
+//      for (int l = pyramidNumber - 1; l > i; l--) {
+//        System.out.print("*");
+//      }
+//      System.out.println();
+//    }
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("squary number plez:");
+    int squareNumber = scanner.nextInt();
+
+    
 
   }
 }

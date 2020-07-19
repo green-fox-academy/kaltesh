@@ -30,7 +30,7 @@ public class DrawTriangle {
 //    }
 //    int triangleNumber = 5;
 
-    for (int i = 0; i < triangleNumber; i++) {
+    for (int i = 0; i < triangleNumber + 1; i++) {
       for (int j = 0; j < i; j++)
         System.out.print("*");
         System.out.println();

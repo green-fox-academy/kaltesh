@@ -32,5 +32,17 @@ public class DrawPyramid {
       }
       System.out.println();
     }
+//    for (int i = 1; i <= pyramidNumber - 1; i++) {
+//      for (int k = 0; k <= i; k++) {
+//        System.out.print(" ");
+//      }
+//      for (int j = pyramidNumber; j > i; j--) {
+//        System.out.print("*");
+//      }
+//      for (int l = pyramidNumber - 1; l > i; l--) {
+//        System.out.print("*");
+//      }
+//      System.out.println();
+//    }
   }
 }
