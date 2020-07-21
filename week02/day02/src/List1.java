@@ -1,8 +1,25 @@
+import java.util.ArrayList;
+
 public class List1 {
   public static void main(String[] args) {
-    String names = ""
+    ArrayList<String> names = new ArrayList<>();
+    names.add("William");
+    int counter = names.size();
+    names.add("John");
+    names.add("Amanda");
+    int counter2 = names.size();
+    System.out.println("I think this is the number of elements should be one atm: " + counter);
+    System.out.println("I think this is the number of elements should be three atm: " + counter2);
+    System.out.println("names of the 3rd character: " + names.get(2));
+    System.out.println(names);
 
 
+    for (int i = 0; i < names.size(); i++) {
+      System.out.println("names listed here:  \n" + (i + 1) + " " + names.get(i));
+    }
+    for (int i = names.size() - 1; i >= 0 ; i--) {
+      System.out.println("names revved here:  " + names.get(i));
+    }
   }
 }
 //  We are going to play with lists. Feel free to use the built-in methods where possible.
