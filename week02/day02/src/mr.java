@@ -45,7 +45,7 @@ public class mr {
   public static void hashMap() {
     HashMap<String, Integer> map = new HashMap<>();
     map.put("apple", 153);
-    System.out.println(map.get("apple"));
+    System.out.println(map.get((153)));
   }
 
 }

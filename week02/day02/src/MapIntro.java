@@ -11,23 +11,20 @@ public class MapIntro {
     leMap.put(65, "A");
     leMap.put(66, "B");
     leMap.put(67, "C");
-
-
     System.out.println(leMap.isEmpty());
     System.out.println(leMap.keySet());
     System.out.println(leMap.values());
-
     leMap.put(68, "D");
     System.out.println(leMap.size());
     System.out.println(leMap.get(99));
-
-//    if (leMap.equals)
-
     if (leMap.get(100) == null) {
       System.out.println("no association with 100");
-          }
+    }
     leMap.clear();
     System.out.println("empty, is it true?  " + (leMap.isEmpty()));
+//    if (leMap.containsValue("C")) {
+//      System.out.println();
+//    }
   }
 }
 //    for (int i = 0; i < leMap.size(); i++) {
