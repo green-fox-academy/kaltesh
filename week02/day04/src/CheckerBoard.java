@@ -1,3 +1,4 @@
+import java.lang.reflect.WildcardType;
 import javax.swing.*;
 
 import java.awt.*;
@@ -7,23 +8,38 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class CheckerBoard {
   public static void mainDraw(Graphics graphics) {
-
-    for (int j = 0; j < WIDTH; j += WIDTH / 4) {
-      for (int i = 1; i < WIDTH; i += WIDTH / 4) {
-        int widthCheck = WIDTH / 8;
-        int[] coordinatesX = {i, i, widthCheck + i, widthCheck + i};
-        int[] coordinatesY = {j, widthCheck + j, widthCheck + j, j};
-        int[] coordinatesX2 =
-            {widthCheck + i, widthCheck + i, 2 * widthCheck + i, 2 * widthCheck + i};
-        int[] coordinatesY2 =
-            {widthCheck + j, 2 * widthCheck + j, 2 * widthCheck + j, widthCheck + j};
-        graphics.setColor(new Color(128, 0, 128));
-        graphics.fillPolygon(coordinatesX, coordinatesY, coordinatesX.length);
-        graphics.fillPolygon(coordinatesX2, coordinatesY2, coordinatesX.length);
-        System.out.println(i);
+    int widthCheck = WIDTH / 8;
+    for (int j = 0; j < WIDTH; j += widthCheck) {
+      for (int i = 0; i < WIDTH; i += widthCheck) {
+        drawSquares(graphics, j, i);
       }
     }
   }
+
+  private static void drawSquares(Graphics graphics, int j, int i) {
+    int widthCheck = WIDTH / 8;
+    int twoBox = WIDTH / 4;
+    int[] coordinatesX = {i, i, widthCheck + i, widthCheck + i};
+    int[] coordinatesY = {j, widthCheck + j, widthCheck + j, j};
+//    int[] coordinatesX2 =
+//        {widthCheck + i, widthCheck + i, 2 * widthCheck + i, 2 * widthCheck + i};
+//    int[] coordinatesY2 =
+//        {widthCheck + j, 2 * widthCheck + j, 2 * widthCheck + j, widthCheck + j};
+    if (((j == 0) | (j % twoBox == 0)) && (i % twoBox == 0)) {
+      graphics.setColor(Color.BLACK);
+    } else if (((j == 0) | (j % twoBox == 0)) && (i % twoBox != 0)) {
+      graphics.setColor(Color.WHITE);
+    } else if ((j % twoBox != 0) && (i % twoBox != 0)) {
+      graphics.setColor(Color.BLACK);
+    } else {
+      graphics.setColor(Color.WHITE);
+    }
+    graphics.fillPolygon(coordinatesX, coordinatesY, coordinatesX.length);
+//    graphics.fillPolygon(coordinatesX2, coordinatesY2, coordinatesX.length);
+//    System.out.println(i);
+  }
+
+  //region stuff
 
   // Don't touch the code below
   static int WIDTH = 640;
@@ -48,5 +64,6 @@ public class CheckerBoard {
       mainDraw(graphics);
     }
   }
-}
+  // endregion
 
+}
