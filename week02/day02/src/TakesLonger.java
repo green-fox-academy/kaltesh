@@ -7,9 +7,7 @@ public class TakesLonger {
     // Add "always takes longer than" to the StringBuilder (quote) between the words "It" and "you"
     // Using pieces of the quote variable (instead of just redefining the string)
 
-
     addString(quote, inQuote);
-
   }
 
   private static void addString(String quote, String inQuote) {

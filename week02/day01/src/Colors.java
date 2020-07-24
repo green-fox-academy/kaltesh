@@ -9,13 +9,12 @@ public class Colors {
 // - In `colors[2]` store the shades of pink:
 //   `"orchid", "violet", "pink", "hot pink"`
 
-    String[][] Colors = {
+    String[][] colors = {
         {"lime", "forest green", "olive", "pale green", "spring green"},
         {"orange red", "red", "tomato"},
         {"orchid", "violet", "pink", "hot pink"}
     };
 
-
-    System.out.println(Colors[2][2]);
+    System.out.println(colors[2][2]);
   }
 }

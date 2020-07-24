@@ -28,8 +28,6 @@ public class mr {
   }
 
   public static void multi() {
-
-
     ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
     ArrayList<Integer> list1 = new ArrayList<>();
     list1.add(0);
@@ -47,6 +45,5 @@ public class mr {
     map.put("apple", 153);
     System.out.println(map.get((153)));
   }
-
 }
 

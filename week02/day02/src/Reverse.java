@@ -16,11 +16,11 @@ public class Reverse {
     System.out.println(reverse(funkyTest));
   }
 
-  public static String reverse(String str) {
-    String rev = "";
-    for (int i = str.length() - 1; i >= 0; i--) {
-      rev += (str.charAt(i));
+  public static String reverse(String textToReverse) {
+    String reverse = "";
+    for (int i = textToReverse.length() - 1; i >= 0; i--) {
+      reverse += (textToReverse.charAt(i));
     }
-    return rev;
+    return reverse;
   }
 }

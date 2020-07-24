@@ -3,7 +3,6 @@ import java.util.Map;
 
 public class MapIntro {
   public static void main(String[] args) {
-
     Map<Integer, String> leMap = new HashMap<>();
     leMap.put(97, "a");
     leMap.put(98, "b");
@@ -17,9 +16,11 @@ public class MapIntro {
     leMap.put(68, "D");
     System.out.println(leMap.size());
     System.out.println(leMap.get(99));
+
     if (leMap.get(100) == null) {
       System.out.println("no association with 100");
     }
+
     leMap.clear();
     System.out.println("empty, is it true?  " + (leMap.isEmpty()));
 //    if (leMap.containsValue("C")) {

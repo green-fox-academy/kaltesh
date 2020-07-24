@@ -38,7 +38,6 @@ public class mr {
   }
 
   public static void bubbleSort(int[] numbers) {
-
     for (int j = 0; j < numbers.length; j++) {
       boolean csereVoltMar = false;
       for (int i = 0; i < numbers.length - 1; i++) {
@@ -49,6 +48,7 @@ public class mr {
           csereVoltMar = true;
         }
       }
+
       if (!csereVoltMar) {
         break;
       }

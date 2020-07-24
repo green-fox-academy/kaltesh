@@ -17,6 +17,7 @@ public class List1 {
     for (int i = 0; i < names.size(); i++) {
       System.out.println("names listed here:  \n" + (i + 1) + " " + names.get(i));
     }
+
     for (int i = names.size() - 1; i >= 0 ; i--) {
       System.out.println("names revved here:  " + names.get(i));
     }

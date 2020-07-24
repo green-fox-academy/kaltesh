@@ -9,8 +9,9 @@ public class Doubling {
     doubling(baseNum);
   }
 
-  public static void doubling(int baseNum) {
+  public static int doubling(int baseNum) {
     int res = baseNum * 2;
     System.out.println(res);
+    return res;
   }
 }
