@@ -24,35 +24,32 @@ public class LinePlay {
   }
 
   private static void drawPrettyLines(Graphics graphics, int segment, int i) {
-    for (int j = 0; j < 15; j++) {
-
-
-      int halfLine = WIDTH / 2;
-      int halfSegment = segment / 2;
-      int[] xCoordinates1 = new int[segment];
-      int[] yCoordinates1 = new int[segment];
-      int[] xCoordinates2 = new int[segment];
-      int[] yCoordinates2 = new int[segment];
-      xCoordinates1[i] = halfLine * i;
-      yCoordinates1[i] = halfLine * i + j * halfSegment;
-      xCoordinates2[i] = halfLine * i + j * segment;
-      yCoordinates2[i] = halfLine;
-      System.out.println(i);
-      graphics.setColor(Color.GREEN);
-      graphics.drawLine(xCoordinates1[i], yCoordinates1[i], xCoordinates2[i], yCoordinates2[i]);
-      int[] xCoordinates3 = new int[segment];
-      int[] yCoordinates3 = new int[segment];
-      int[] xCoordinates4 = new int[segment];
-      int[] yCoordinates4 = new int[segment];
-      xCoordinates3[i] = i * halfLine + j * segment;
-      yCoordinates3[i] = i * halfLine;
-      xCoordinates4[i] = halfLine;
-      yCoordinates4[i] = halfLine * i + j * segment;
-      System.out.println(i);
-      graphics.setColor(Color.MAGENTA);
-      graphics.drawLine(xCoordinates3[i], yCoordinates3[i], xCoordinates4[i], yCoordinates4[i]);
-    }
+    int[] xCoordinates1 = new int[segment];
+    int[] yCoordinates1 = new int[segment];
+    int[] xCoordinates2 = new int[segment];
+    int[] yCoordinates2 = new int[segment];
+    xCoordinates1[i] = 0;
+    yCoordinates1[i] = i * segment;
+    xCoordinates2[i] = i * segment;
+    yCoordinates2[i] = HEIGHT;
+    System.out.println(i);
+    graphics.setColor(Color.GREEN);
+    graphics.drawLine(xCoordinates1[i], yCoordinates1[i], xCoordinates2[i], yCoordinates2[i]);
+    int[] xCoordinates3 = new int[segment];
+    int[] yCoordinates3 = new int[segment];
+    int[] xCoordinates4 = new int[segment];
+    int[] yCoordinates4 = new int[segment];
+    xCoordinates3[i] = i * segment;
+    yCoordinates3[i] = 0;
+    xCoordinates4[i] = WIDTH;
+    yCoordinates4[i] = i * segment;
+    System.out.println(i);
+    graphics.setColor(Color.MAGENTA);
+    graphics.drawLine(xCoordinates3[i], yCoordinates3[i], xCoordinates4[i], yCoordinates4[i]);
   }
+
+
+
 
   //region usualStuff
 // Don't touch the code below
