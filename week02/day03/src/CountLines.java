@@ -10,6 +10,7 @@ public class CountLines {
     fileName(Paths.get("my-file.txt"));
   }
 
+
   private static void fileName(Path file) {
     try {
       List<String> list = Files.readAllLines(file);
