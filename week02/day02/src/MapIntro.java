@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.DefaultListSelectionModel;
 
 public class MapIntro {
   public static void main(String[] args) {
@@ -20,12 +21,15 @@ public class MapIntro {
     if (leMap.get(100) == null) {
       System.out.println("no association with 100");
     }
-
+//    if (leMap.containsKey(100)) {
+//      System.out.println("yes 100");
+//    } else {
+//      System.out.println(" no 100");
+//    }
     leMap.clear();
     System.out.println("empty, is it true?  " + (leMap.isEmpty()));
-//    if (leMap.containsValue("C")) {
-//      System.out.println();
-//    }
+    System.out.println();
+
   }
 }
 //    for (int i = 0; i < leMap.size(); i++) {

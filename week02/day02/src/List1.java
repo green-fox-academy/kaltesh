@@ -21,6 +21,8 @@ public class List1 {
     for (int i = names.size() - 1; i >= 0 ; i--) {
       System.out.println("names revved here:  " + names.get(i));
     }
+    names.clear();
+    System.out.println(names.isEmpty());
   }
 }
 //  We are going to play with lists. Feel free to use the built-in methods where possible.

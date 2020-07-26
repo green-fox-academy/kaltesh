@@ -14,28 +14,28 @@ public class ShoppingList2 {
     shopList.put("Potato", 1.75);
     shopList.put("Onion", 1.10);
 
-    HashMap<String, Integer> bobList = new HashMap<>();
-    bobList.put("Milk", 3);
-    bobList.put("Rice", 2);
-    bobList.put("Eggs", 2);
-    bobList.put("Cheese", 1);
-    bobList.put("Chicken Breasts", 4);
-    bobList.put("Apples", 1);
-    bobList.put("Tomato", 2);
-    bobList.put("Potato", 1);
+    HashMap<String, Double> bobList = new HashMap<>();
+    bobList.put("Milk", 3.0);
+    bobList.put("Rice", 2.0);
+    bobList.put("Eggs", 2.0);
+    bobList.put("Cheese", 1.0);
+    bobList.put("Chicken Breasts", 4.0);
+    bobList.put("Apples", 1.0);
+    bobList.put("Tomato", 2.0);
+    bobList.put("Potato", 1.0);
 
-    HashMap<String, Integer> aliceList = new HashMap<>();
-    aliceList.put("Rice", 1);
-    aliceList.put("Eggs", 5);
-    aliceList.put("Chicken Breasts", 2);
-    aliceList.put("Apples", 1);
-    aliceList.put("Tomato", 10);
-
+    HashMap<String, Double> aliceList = new HashMap<>();
+    aliceList.put("Rice", 1.0);
+    aliceList.put("Eggs", 5.0);
+    aliceList.put("Chicken Breasts", 2.0);
+    aliceList.put("Apples", 1.0);
+    aliceList.put("Tomato", 10.0);
+  }
+}
 //    How much does Bob pay?
 //    How much does Alice pay?
 //    Who buys more Rice?
 //    Who buys more Potato?
 //    Who buys more different products?
 //        Who buys more products? (piece)
-
 
