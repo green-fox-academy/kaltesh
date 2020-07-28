@@ -25,8 +25,8 @@ public class MapIntro2 {
       }
     }
 
-    for (String i : phoneBookMap.keySet()) {
-      System.out.println(phoneBookMap.get(i) + " SB:  " + i + ".");
+    for (String line : phoneBookMap.keySet()) {
+      System.out.println(phoneBookMap.get(line) + " SB:  " + line + ".");
     }
 
     //    # Map introduction 2

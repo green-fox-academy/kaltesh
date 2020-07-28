@@ -18,6 +18,6 @@ public class Sum {
 //    why this no good
 //  public static int sum(int number) {
 //    return number + sum(number - 1);
-//  }
+  }
 
 }

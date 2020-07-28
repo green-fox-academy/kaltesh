@@ -23,7 +23,7 @@ public class Counter {
     count = count2;
   }
 
-  public void add() { 
+  public void add() {
     ++count;
   }
 
