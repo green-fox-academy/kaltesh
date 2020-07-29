@@ -25,7 +25,7 @@ public class Main {
       if (pokemon.isEffectiveAgainst(wildPokemon)){
         theChosenOne = pokemon;
       }
-    System.out.println(theChosenOne.name);
+    System.out.println(theChosenOne.name + " !");
 
 //  }
 
