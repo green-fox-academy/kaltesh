@@ -40,7 +40,7 @@ public class Farm {
         leastHungry = animalsOnFarm.get(i);
       }
     }
-  animalsOnFarm.remove(leastHungry);
+    animalsOnFarm.remove(leastHungry);
 
   }
 }

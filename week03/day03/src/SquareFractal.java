@@ -15,7 +15,7 @@ public class SquareFractal {
     int y2 = 300;
 //    int side = 100;
 //
-    int side = WIDTH/4;
+    int side = WIDTH/9;
 //    graphics.drawLine(x1, y1, x2, y2);
 //    graphics.drawLine(x1 + ((x2 - x1) / 2), (int) (y1 -(side * (Math.sqrt(3)/2))), x1, y1);
 //    graphics.drawLine(x1 + ((x2 - x1) / 2), (int) (y1 -(side * (Math.sqrt(3)/2))), x2, y2);

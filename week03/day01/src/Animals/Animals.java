@@ -18,7 +18,7 @@ public class Animals {
 
   public void drink() {
     --thirst;
-    System.out.println("mlemmlemmlem");
+    System.out.println("mlemmlem mlem");
   }
 
   public void play() {

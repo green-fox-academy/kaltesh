@@ -21,22 +21,22 @@ public class Main {
     for (int i = 0; i < 8; i++) {
       theFarm.breed();
     }
-//    for (int i = 0; i < 2; i++) {
-//      animal.eat();
-//      animal.drink();
+    for (int i = 0; i < 2; i++) {
+      animal.eat();
+      animal.drink();
 //    }
-    System.out.println(animal.getThirst());
-    System.out.println(theFarm.getNumberOfAnimals());
-    theFarm.getAnimal(4).eat();
+      System.out.println(animal.getThirst());
+      System.out.println(theFarm.getNumberOfAnimals());
+      theFarm.getAnimal(4).eat();
 //    for (int i = 0; i < theFarm.slots; i++) {
 //      System.out.println(theFarm.getAnimal(i).getHunger());
 //    }
-    theFarm.slaughter();
-    System.out.println(theFarm.getNumberOfAnimals());
+      theFarm.slaughter();
+      System.out.println(theFarm.getNumberOfAnimals());
 
+    }
   }
 }
-
 //  Reuse your Animal class
 //  Create a Farm class
 //    it has list of Animals
