@@ -21,10 +21,10 @@ public class Main {
     System.out.print("I choose you, ");
 
     Pokemon theChosenOne = new Pokemon("","","");
-    for (Pokemon pokemon : pokemonOfAsh)
-      if (pokemon.isEffectiveAgainst(wildPokemon)){
+    for (Pokemon pokemon : pokemonOfAsh) {
+      if (pokemon.isEffectiveAgainst(wildPokemon)) {
         theChosenOne = pokemon;
-      }
+      }}
     System.out.println(theChosenOne.name + " !");
 
 //  }

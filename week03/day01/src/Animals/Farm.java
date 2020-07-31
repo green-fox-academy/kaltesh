@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Farm {
-  List<Animals> animalsOnFarm = new ArrayList<>();
-  int slots;
+  private List<Animals> animalsOnFarm = new ArrayList<>();
+  private int slots;
 
   public Farm() {
     this.slots = 10;
   }
 
-  public Farm(List<Animals> animalsOnFarm) {
-    this.animalsOnFarm = animalsOnFarm;
-  }
+//  public Farm(List<Animals> animalsOnFarm) {
+//    this.animalsOnFarm = animalsOnFarm;
+//  }
 
   public int getNumberOfAnimals() {
     return animalsOnFarm.size();
@@ -41,6 +41,5 @@ public class Farm {
       }
     }
     animalsOnFarm.remove(leastHungry);
-
   }
 }

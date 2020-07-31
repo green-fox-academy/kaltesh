@@ -21,7 +21,6 @@ public class Main {
     for (int i = 0; i < diceSet.getSize(); i++) {
       while (diceSet.getCurrent(i) != 6) {
         diceSet.reroll(i);
-
       }
     }
     System.out.println(diceSet.getCurrent());

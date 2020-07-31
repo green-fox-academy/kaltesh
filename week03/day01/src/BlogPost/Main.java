@@ -7,7 +7,6 @@ public class Main {
     Blogpost newBlog2 = new Blogpost("Jani","Alkoholizmus", "erdekes olvasmany", "2006.06.06");
     Blogpost newBlog3 = new Blogpost("Pityu", "Drogokrol", "Dont do drugs", "20011.11.11");
 
-
   }
 }
 
