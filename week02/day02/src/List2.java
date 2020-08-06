@@ -55,4 +55,3 @@ public class List2 {
 //    - Add Passion Fruit and Pomelo to `List B` in a single statement
 //    - Print out the 3rd element from `List A`
   }
-}

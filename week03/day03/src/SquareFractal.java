@@ -7,7 +7,6 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class SquareFractal {
 
 
-
   public static void drawTriangle(Graphics graphics){
     int x1 = 0;
     int x2 = 200;

@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class ShoppingList2 {
+public class  ShoppingList2 {
   public static void main(String[] args) {
 
     HashMap<String, Double> shopList = new HashMap<>();
