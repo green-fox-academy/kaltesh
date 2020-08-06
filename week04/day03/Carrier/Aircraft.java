@@ -25,6 +25,18 @@ public abstract class Aircraft {
     return ammoAfterOneFill;
   }
 
+//  public int refill(int ammoAvailableOnCarrier) {
+//    int ammoWeNeed = maxAmmo - ammo;
+//    if (ammoAvailableOnCarrier >= ammoWeNeed) {
+//      ammo = maxAmmo;
+//      ammoAvailableOnCarrier -= ammoWeNeed;
+//    } else {
+//      ammo = ammoAvailableOnCarrier;
+//      ammoAvailableOnCarrier = 0;
+//    }
+//    return ammoAvailableOnCarrier;
+//  }
+
   public String getType() {
     return getClass().getSimpleName();
   }

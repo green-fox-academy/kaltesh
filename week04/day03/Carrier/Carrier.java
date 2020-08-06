@@ -39,20 +39,31 @@ public class Carrier {
       allTheNeededAmmo += (aircraft.getMaxAmmo() - aircraft.getAmmo());
     }
     if (allTheNeededAmmo > storedAmmoOnCarrier) {
+      fillPriorityAircraft();
+      fillNonPriorityAircraft();
+    } else {
       for (Aircraft aircraft : aircrafts) {
-        if ((aircraft.isPriority()) &&
-            (aircraft.getMaxAmmo() - aircraft.getAmmo()) < storedAmmoOnCarrier) {
-          storedAmmoOnCarrier = aircraft.refill(storedAmmoOnCarrier);
-        } else if ((aircraft.isPriority()) &&
-            (aircraft.getMaxAmmo() - aircraft.getAmmo()) > storedAmmoOnCarrier) {
-          storedAmmoOnCarrier -= aircraft.setAmmo(storedAmmoOnCarrier);
-        }
+        storedAmmoOnCarrier = aircraft.refill(storedAmmoOnCarrier);
       }
     }
+  }
+
+  private void fillPriorityAircraft() {
+    for (Aircraft aircraft : aircrafts) {
+      if ((aircraft.isPriority()) &&
+          (aircraft.getMaxAmmo() - aircraft.getAmmo()) < storedAmmoOnCarrier) {
+        storedAmmoOnCarrier = aircraft.refill(storedAmmoOnCarrier);
+      } else {
+        storedAmmoOnCarrier -= aircraft.setAmmo(storedAmmoOnCarrier);
+      }
+    }
+  }
+
+  private void fillNonPriorityAircraft() {
     for (Aircraft aircraft : aircrafts) {
       if ((aircraft.getMaxAmmo() - aircraft.getAmmo()) < storedAmmoOnCarrier) {
         storedAmmoOnCarrier = aircraft.refill(storedAmmoOnCarrier);
-      } else if ((aircraft.getMaxAmmo() - aircraft.getAmmo()) > storedAmmoOnCarrier) {
+      } else {
         storedAmmoOnCarrier -= aircraft.setAmmo(storedAmmoOnCarrier);
       }
     }
@@ -70,9 +81,9 @@ public class Carrier {
     return healthPointsOfACarrier;
   }
 
-  public void fight(Carrier myCarrier, Carrier otherCarrier) {
+  public void fight(Carrier otherCarrier) {
     int carrierHealthPointsAfterFight =
-        otherCarrier.getHealthPointsOfACarrier() - myCarrier.getTotalDamage();
+        otherCarrier.getHealthPointsOfACarrier() - getTotalDamage();
     otherCarrier.setHealthPointsOfACarrier(carrierHealthPointsAfterFight);
   }
 }

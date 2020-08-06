@@ -45,7 +45,7 @@ public class MyMain {
 //    anotherAircraftCarrier
 
     anotherAircraftCarrier.getCarrierStatus();
-    aircraftCarrier.fight(aircraftCarrier, anotherAircraftCarrier);
+    aircraftCarrier.fight(anotherAircraftCarrier);
     aircraftCarrier.getCarrierStatus();
     anotherAircraftCarrier.getCarrierStatus();
 
