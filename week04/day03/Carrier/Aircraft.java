@@ -9,11 +9,6 @@ public abstract class Aircraft {
     ammo = 0;
   }
 
-//  public int dogFight() {
-//    return ammo * damage;
-//    useAllAmmo();
-//  }
-
   public int fight() {
     int damageDealt = ammo * damage;
     setAmmo(0);
@@ -24,12 +19,10 @@ public abstract class Aircraft {
     return ammo;
   }
 
-
-  public int refill(int allTheAmmoOnTheCarrier) {
-    int neededAmmo = maxAmmo - ammo;
-    allTheAmmoOnTheCarrier = allTheAmmoOnTheCarrier - neededAmmo;
+  public int refill(int ammoAvailableOnCarrier) {
+    int ammoAfterOneFill = ammoAvailableOnCarrier - (maxAmmo - ammo);
     ammo = maxAmmo;
-    return allTheAmmoOnTheCarrier;
+    return ammoAfterOneFill;
   }
 
   public String getType() {
@@ -46,18 +39,15 @@ public abstract class Aircraft {
     return maxAmmo;
   }
 
-//  public boolean isPriority() {
-//    return getType().equals("F35");
-//  }
-
   public abstract boolean isPriority();
 
   public int getDamage() {
     return damage;
   }
 
-  public void setAmmo(int ammo) {
+  public int setAmmo(int ammo) {
     this.ammo = ammo;
+    return ammo;
   }
 
   public void setMaxAmmo(int maxAmmo) {
