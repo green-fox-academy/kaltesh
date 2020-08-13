@@ -1,9 +1,13 @@
 package AnimalsOfTheZoo;
 
-public abstract class Mammal {
+public class Mammal extends Animal {
 
+  public Mammal(String name) {
+    super(name);
+  }
 
+  @Override
   public String breed() {
-    return "with a lot a blood and pain";
+    return " pushing little versions out ";
   }
 }

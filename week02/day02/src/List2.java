@@ -37,7 +37,7 @@ public class List2 {
 
     listB.addAll(Arrays.asList("PassionFruit", "Pomelo"));
     System.out.println(listA.get(3));
-;
+    ;
 
 
     //    # List introduction 2
@@ -55,3 +55,4 @@ public class List2 {
 //    - Add Passion Fruit and Pomelo to `List B` in a single statement
 //    - Print out the 3rd element from `List A`
   }
+}

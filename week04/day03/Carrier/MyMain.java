@@ -8,7 +8,7 @@ public class MyMain {
   public static void main(String[] args) {
     List<Aircraft> aircrafts = new ArrayList<>();
     Carrier aircraftCarrier = new Carrier(100, 10050);
-    Carrier anotherAircraftCarrier = new Carrier(515, 20000);
+    Carrier anotherAircraftCarrier = new Carrier(515, 200);
     F16 f1601 = new F16();
     F16 f1602 = new F16();
     F16 f1603 = new F16();
@@ -34,6 +34,9 @@ public class MyMain {
 
     System.out.println(aircraftCarrier.storedAmmoOnCarrier);
     aircraftCarrier.fill();
+    for (Aircraft a : aircrafts) {
+      a.getStatus();
+    }
     f1601.getStatus();
     f1602.getStatus();
     f1603.getStatus();
