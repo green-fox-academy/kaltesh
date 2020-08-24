@@ -6,6 +6,7 @@ public abstract class Aircraft {
   private int damage;
 
   public Aircraft() {
+
     ammo = 0;
   }
 
