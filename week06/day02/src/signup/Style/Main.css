@@ -1,0 +1,80 @@
+body {
+    background: darkgrey;
+}
+
+div {
+    background: white;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 330px;
+    background: white;
+    padding: 50px 0 50px 50px;
+
+}
+
+section {
+    background: white;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input {
+    margin: 20px 0 0 0;
+    padding: 5px 0 5px 0;
+    width: 95%;
+    border: 0;
+    border-bottom: 1px solid green;
+}
+
+button {
+    background: teal;
+    margin-top: 50px;
+    width: 150px;
+    color: white;
+    padding: 5px;
+}
+
+.otherLogin {
+    width: 300px;
+    height: 20px;
+    margin: 15px 0 15px 0;
+    padding: 5px 0 20px 0
+}
+
+#fb {
+    background: blue;
+}
+
+#gg {
+    background: red;
+}
+
+middle {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 0.8em;
+    background: grey;
+}
+
+
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid green;
+}

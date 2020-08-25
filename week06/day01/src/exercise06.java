@@ -9,7 +9,7 @@ public class exercise06 {
     String theText = "a GreenFox Once Fell Into A Fox Trap";
     theText.chars()
         .filter(x -> x == ((int)(Character.toString((char)x).toUpperCase()).charAt(0)))
-        .forEach(x -> System.out.println((char)x));
+        .forEach(x -> System.out.print((char)x));
   }
 }
 
