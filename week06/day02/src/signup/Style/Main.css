@@ -16,7 +16,6 @@ form {
     width: 330px;
     background: white;
     padding: 50px 0 50px 50px;
-
 }
 
 section {
@@ -27,7 +26,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
 
 input {
     margin: 20px 0 0 0;
@@ -68,11 +66,9 @@ middle {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 0.8em;
-    background: grey;
+    font-size: 0.7em;
+    background: lightgrey;
 }
-
-
 
 input:focus {
     outline: none;
