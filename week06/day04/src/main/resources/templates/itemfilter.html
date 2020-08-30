@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AverageStock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>My Shop</header>
+<div id="filters">
+    <span><a th:href="'/only-available'">ONLY AVAILABLE</a></span>
+    <span><a th:href="'/cheapest-first'">CHEAPEST FIRST</a></span>
+    <span><a th:href="'/contains-sleep'">CONTAINS SLEEP</a></span>
+    <span><a th:href="'/average-stock'">AVERAGE STOCK</a></span>
+    <span>MOST EXPENSIVE AVAILABLE</span>
+</div>
+<div class="searchbar">
+    <label for="searchbar">Search For...</label>
+    <input type="text" name="searchbar" id="searchbar" placeholder="...something like psilocybin">
+    <span><a>Search</a></span>
+</div>
+<div>
+    <h2 th:text="${averageStockLevel}"></h2>
+</div>
+</body>
+</html>
+Create another template with the same structure
+Instead of the table
+display a header with the average of the stock quantity

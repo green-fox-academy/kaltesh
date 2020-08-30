@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenFoxWebShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>My Shop</header>
+<div id="filters">
+    <h3><a th:href="'/only-available'">ONLY AVAILABLE</a></h3>
+    <h3><a th:href="'/cheapest-first'">CHEAPEST FIRST</a></h3>
+    <h3><a th:href="'/contains-sleep'">CONTAINS SLEEP</a></h3>
+    <h3><a th:href="'/average-stock'">AVERAGE STOCK</a></h3>
+    <h3><a th:href="'/most-expensive'">MOST EXPENSIVE AVAILABLE</a></h3>
+</div>
+<div class="searchbar">
+    <form action="/search" method="post">
+        <label for="searchbar">Search for:</label><br>
+        <input type="text" placeholder="...something like psylocibin" id="searchbar" name="searchBarInput">
+        <button id="searchbutton">Search</button>
+    </form>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity of Stock</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${item.getDescription()}"></td>
+            <td th:text="${item.getPrice()} + ' fabatka'" class="centertable"></td>
+            <td th:text="${item.getStockLevel()}" class="centertable"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

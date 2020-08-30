@@ -1,0 +1,69 @@
+div {
+    background: white;
+}
+
+body {
+    width: 1000px;
+}
+
+#filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+h3 {
+    background: red;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    /*font-size: 1em;*/
+    width: 100%;
+    margin: auto;
+}
+
+#searchbar {
+    width: 850px;
+}
+
+#searchbutton {
+    width: 110px;
+
+}
+
+#searchbutton, #searchbar {
+    height: 40px;
+    border-radius: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: white solid 2px;
+    font-size: 1.6em;
+
+}
+th {
+    background: teal;
+    height: 80px;
+    border: white solid 2px;
+
+
+}
+td {
+    background: white;
+    height: 50px;
+    border: white solid 2px;
+}
+
+.centertable{
+    text-align: center;
+}
