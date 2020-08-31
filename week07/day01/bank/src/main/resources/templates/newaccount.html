@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Bank of Simba</title>
+</head>
+<body>
+<div>
+    <form method="POST" action="/newaccount">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="balance">Balance</label>
+        <input type="text" name="balance" id="balance" required>
+        <label for="animalType">Animal Type</label>
+        <input type="text" name="animalType" id="animalType" required>
+        <label for="isKing">King?</label>
+        <select name="isKing" id="isKing" required>
+            <option>true</option>
+            <option>false</option>
+        </select>
+        <label for="isBadGuy">Bad Guy?</label>
+        <select name="isBadGuy" id="isBadGuy" required>
+            <option>true</option>
+            <option>false</option>
+        </select>
+        <button>Give That Animal A Bank Account!!</button>
+    </form>
+</div>
+<a href="/list">
+    <button>Go Back</button>
+</a>
+</body>
+</html>

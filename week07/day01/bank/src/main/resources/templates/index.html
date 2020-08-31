@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Of Simba</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Type Of Animal</th>
+            <th>ID</th>
+            <th>What Is This Animal</th>
+        </tr>
+        <tr th:each="bankAccount : ${bankAccounts}">
+            <td th:style="${bankAccount.getIsKing()} ? 'color: gold; text-weight: bold; font-size: 1.9em'"
+                th:text="${bankAccount.getName()}"></td>
+            <td th:style="${bankAccount.getIsKing()} ? 'color: gold; text-weight: bold; font-size: 1.9em'"
+                th:text="|${#numbers.formatDecimal(bankAccount.getBalance(), 1, 2, 'COMMA')}|"></td>
+            <td th:style="${bankAccount.getIsKing()} ? 'color: gold; text-weight: bold; font-size: 1.9em'"
+                th:text="${bankAccount.getAnimalType()}"></td>
+            <td th:style="${bankAccount.getIsKing()} ? 'color: gold; text-weight: bold; font-size: 1.9em'"
+                th:text="${bankAccountStat.count}"></td>
+            <td th:style="${bankAccount.getIsKing()} ? 'color: gold; text-weight: bold; font-size: 1.9em'"
+                th:text="${bankAccount.isKing} ? 'is a king' : 'is not a king'"></td>
+        </tr>
+    </table>
+</div>
+
+<form method="POST" action="/raisebalance">
+    <label for="name">Name</label>
+    <select name="name" id="name">
+        <option th:each="bankAccount :${bankAccounts}" th:text="${bankAccount.name}"></option>
+    </select>
+    <button>Give It Away</button>
+</form>
+</form>
+<div>
+    <a href="/raisebalance">
+        <button>Pick A Lucky Fool</button>
+    </a>
+</div>
+<div>
+    <form method="POST" action="/newaccount">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="balance">Balance</label>
+        <input type="text" name="balance" id="balance" required>
+        <label for="animalType">Animal Type</label>
+        <input type="text" name="animalType" id="animalType" required>
+        <label for="isKing">King?</label>
+        <select name="isKing" id="isKing" required>
+            <option>true</option>
+            <option>false</option>
+        </select>
+        <label for="isBadGuy">Bad Guy?</label>
+        <select name="isBadGuy" id="isBadGuy" required>
+            <option>true</option>
+            <option>false</option>
+        </select>
+        <button>Give That Animal A Bank Account!!</button>
+    </form>
+</div>
+<div>
+    <a href="/newaccount">
+        <button>Give An Animal A Bank Accout They Said<br>
+            It's A Good Idea They Said
+        </button>
+    </a>
+</div>
+<div>
+    <p th:text="${sentence}"></p>
+    <p th:utext="${sentence}"></p>
+</div>
+</body>
+</html>
