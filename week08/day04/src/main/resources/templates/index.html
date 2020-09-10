@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>red</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p></p><a href="submit">Submit new post</a></p>
+<h1>Trending Posts</h1>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>amountOfVotes</th>
+        <th>upvote</th>
+        <th>downwote</th>
+        <th>post</th>
+    </tr>
+    <tr th:each="reddit : ${reddits}">
+        <td th:text="${reddit.id}"></td>
+        <td class="short" th:text="${reddit.amountOfVotes}"></td>
+        <td class="short">
+            <form th:action="@{'/upvote?id=' + ${reddit.id}}" method="post">
+                <button type="submit" class="btn btn-link">+</button>
+            </form>
+        </td>
+        <td class="short">
+            <form th:action="@{'/downvote?id=' + ${reddit.id}}" method="post">
+                <button type="submit" class="btn btn-link">-</button>
+            </form>
+        </td>
+        <td>
+            <a th:href="@{reddit.url}">
+                <span th:text="${reddit.post}"/>
+            </a>
+        </td>
+        <!--                <td th:text="${reddit.url}"></td>-->
+    </tr>
+</table>
+</body>
+</html>
+

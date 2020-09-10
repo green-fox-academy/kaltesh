@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form th:action="@{/submit}" method="POST">
+    <!--    <label for="newpost">your new post</label>-->
+    <!--    <input type="text" name="newpost" id="newpost" required>-->
+    <!--    <label for="newurl">the url</label>-->
+    <!--    <input type="text" name="newurl" id="newurl" required>-->
+    <form method="POST" action="/submit">
+        <label for="post">your post here</label>
+        <input type="text" name="post" id="post" required>
+        <label for="url">url here</label>
+        <input type="text" name="url" id="url" required>
+        <button>add new post</button>
+    </form>
+</form>
+</body>
+</html>
+
