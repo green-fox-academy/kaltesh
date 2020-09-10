@@ -52,4 +52,27 @@ public class RedController {
     return "redirect:";
   }
 
+  @RequestMapping(value = "/cheat", method = RequestMethod.GET)
+  public String renderChangeScorePage(@RequestParam(name = "id") long id, Model model) {
+    model.addAttribute("reddit", redService.findRedById(id));
+    return "cheat";
+  }
+//  public String getFoos(@RequestParam String id) {
+
+
+
+
+
+  @RequestMapping(value = "/cheat/addtoscore", method = RequestMethod.POST)
+  public String increaseScoreOfARed(@RequestParam(name = "id") long id, int amountToChangeTheScoreWith) {
+    redService.addToScore(id, amountToChangeTheScoreWith);
+    return "redirect:";
+  }
+
+  @RequestMapping(value = "/cheat/takefromscore", method = RequestMethod.POST)
+  public String decreaseScoreOfARed(@RequestParam(name = "id") long id, int amountToChangeTheScoreWith) {
+    redService.takeFromScore(id, amountToChangeTheScoreWith);
+    return "redirect:";
+  }
+
 }

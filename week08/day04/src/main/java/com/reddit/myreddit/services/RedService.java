@@ -14,7 +14,6 @@ public class RedService {
 
   public List<Red> getAllTheReds() {
     return redRepository.findAll();
-
   }
 
   public void add(Red red) {
@@ -34,6 +33,18 @@ public class RedService {
   public void decreaseVoteCount(long id) {
     Red red = findRedById(id);
     red.setAmountOfVotes(red.getAmountOfVotes() - 1);
+    redRepository.save(red);
+  }
+
+  public void addToScore(long id, int amount) {
+    Red red = findRedById(id);
+    red.setAmountOfVotes(red.getAmountOfVotes() + amount);
+    redRepository.save(red);
+  }
+
+  public void takeFromScore(long id, int amount) {
+    Red red = findRedById(id);
+    red.setAmountOfVotes(red.getAmountOfVotes() - amount);
     redRepository.save(red);
   }
 

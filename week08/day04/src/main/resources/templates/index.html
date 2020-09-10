@@ -17,6 +17,7 @@
         <th>upvote</th>
         <th>downwote</th>
         <th>post</th>
+        <th>cheat</th>
     </tr>
     <tr th:each="reddit : ${reddits}">
         <td th:text="${reddit.id}"></td>
@@ -32,11 +33,13 @@
             </form>
         </td>
         <td>
-            <a th:href="@{reddit.url}">
+            <a th:href="'https://' + ${reddit.url}">
                 <span th:text="${reddit.post}"/>
             </a>
         </td>
-        <!--                <td th:text="${reddit.url}"></td>-->
+        <td>
+            <a th:href="@{'/cheat?id=' + ${reddit.id}}">oo</a>
+        </td>
     </tr>
 </table>
 </body>
