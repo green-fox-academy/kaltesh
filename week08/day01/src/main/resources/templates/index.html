@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>todo</title>
+</head>
+<body class="container">
+<h1>Todos</h1>
+<h2>New Todo</h2>
+<form th:action="@{/todo}" method="post">
+    <label for="newTodo">New Todo</label>
+    <input type="text" id="newTodo" name="newTodo" required/>
+    <button type="submit">Add</button>
+</form>
+<table class="container">
+    <tr>
+        <!--        <th>id</th>-->
+        <th>Todo</th>
+        <th>Action</th>
+        <th>urgent</th>
+    </tr>
+    <tr th:each="todo : ${todos}">
+        <!--        <td th:text="${todo.getId()}"></td>-->
+        <td
+            th:style="${todo.isUrgent()} ? 'text-decoration: underline'"
+            th:text="${todo.getName()}"></td>
+        <td>
+            <!--        <a th:action="@{'/complete?id=' + ${todo.getId()}}" method="post" href="/complete">complete</a>-->
+            <form th:action="@{'/complete?id=' + ${todo.getId()}}" method="post">
+                <button type="submit" class="btn btn-link">Complete</button>
+            </form>
+            <form th:action="@{'/delete?id=' + ${todo.getId()}}" method="post">
+                <button type="submit" class="btn btn-link">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{'/urgent?id=' + ${todo.getId()}}" method="post">
+                <input type="checkbox">
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
