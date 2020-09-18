@@ -23,20 +23,17 @@ public class TodoController {
   public String list(Model model) {
     model.addAttribute("todos", todoRepository.findAll());
     return "todo";
-
   }
 
   @RequestMapping(value = "/newtodo", method = RequestMethod.GET)
   public String renderAdd() {
     return "newtodo";
-
   }
 
   @RequestMapping(value = "/newtodo", method = RequestMethod.POST)
   private String addTodo(String title, boolean isDone, boolean isUrgent) {
     todoRepository.save(new Todo(title, isDone, isUrgent));
     return "redirect:/";
-
   }
 
 

@@ -1,4 +1,6 @@
 package com.dependencies.deppy.coloring;
 
-public class MyColor {
+
+public interface MyColor {
+  public void printColor();
 }

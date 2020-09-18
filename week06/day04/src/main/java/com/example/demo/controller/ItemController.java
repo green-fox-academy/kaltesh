@@ -55,15 +55,6 @@ public class ItemController {
     return "index";
   }
 
-  @GetMapping("/average-stock")
-  public String getAverageStock(Model model) {
-    double averageStockLevel = items.stream()
-        .mapToInt(Item::getStockLevel)
-        .average()
-        .orElse(0);
-    model.addAttribute("averageStockLevel", "The Average Stock is: " + averageStockLevel);
-    return "itemfilter";
-  }
 
   @GetMapping("/most-expensive")
   public String getMostExpensive(Model model) {
@@ -92,7 +83,7 @@ public class ItemController {
 //    Set the method to POST and the action to /search
 //    Name the input field
 //    POST /search
-//    Filter only those that are containing the searched k
+//    Filter only those that are containing the searched
 //    eyword in the name or in the description
 //    Display them in the table
 }

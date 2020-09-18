@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface RedRepository extends CrudRepository<Red, Long> {
 
+public interface RedRepository extends CrudRepository<Red, Long> {
   List<Red> findAll();
 }
+
+
+

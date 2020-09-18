@@ -36,16 +36,13 @@ public class RedService {
     redRepository.save(red);
   }
 
-  public void addToScore(long id, int amount) {
+  public Red changeScore(long id, int amount, String giveortake) {
     Red red = findRedById(id);
-    red.setAmountOfVotes(red.getAmountOfVotes() + amount);
+    int theActualAmountWithNegativePossible =
+        (giveortake.equals("+")) ? amount : (giveortake.equals("-")) ? -amount : 0;
+    red.setAmountOfVotes(red.getAmountOfVotes() + theActualAmountWithNegativePossible);
     redRepository.save(red);
+    return red;
   }
-
-  public void takeFromScore(long id, int amount) {
-    Red red = findRedById(id);
-    red.setAmountOfVotes(red.getAmountOfVotes() - amount);
-    redRepository.save(red);
-  }
-
 }
+

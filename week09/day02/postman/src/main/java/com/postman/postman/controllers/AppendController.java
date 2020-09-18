@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppendController {
 
-
-  @RequestMapping(value = "/appenda/{appendable}", method = RequestMethod.GET)
-  public ResponseEntity getGreeting(@PathVariable String appendable) {
-    return ResponseEntity.status(HttpStatus.OK).body(new Append(appendable));
-  }
+//
+//  @RequestMapping(value = "/appenda/{appendable}", method = RequestMethod.GET)
+//  public ResponseEntity getGreeting(@PathVariable String appendable) {
+//    return ResponseEntity.status(HttpStatus.OK).body(new Append(appendable));
+//  }
 }

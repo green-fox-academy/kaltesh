@@ -9,20 +9,23 @@
 <h1>and now</h1>
 <table>
     <tr>
-        <td th:text="${reddit.amountOfVotes}"></td>
         <td th:text="${reddit.post}"></td>
-        <td th:text="${reddit.id}"></td>
 </table>
-<!--<form th:action="/cheat" method="POST">-->
-<form >
-    <label for="amount">plez enter desired amount</label>
-    <input type="number" id="amount" name="amountToChangeTheScoreWith">
-
-    <button th:formaction="'/cheat/addtoscore?id='+${reddit.id}" method="post" type="submit">add votes</button>
-    <button th:formaction="'/cheat/takefromscore?id='+${reddit.id}" method="post" type="submit">take votes</button>
-
+<form method="post">
+    <table>
+        <tr>
+            <form method="post" th:action="|/cheat/${reddit.id}|">
+                <td>
+                    <input class="link-button" type="submit" name="vote" value="+">
+                </td>
+                <label for="amount">plez enter desired amount</label>
+                <input type="number" id="amount" name="amountToChangeTheScoreWith">
+                <td>
+                    <input class="link-button" type="submit" name="vote" value="-">
+                </td>
+            </form>
+        </tr>
+    </table>
 </form>
 </body>
 </html>
-<!--formaction="/cheat/addtoscore"-->
-<!--formaction="/cheat/takefromscore"-->

@@ -68,7 +68,7 @@ public class BankController {
   }
 
   @RequestMapping(value = "/raisebalance", method = RequestMethod.POST)
-  public String postRaiseBalance(@RequestParam String name) {
+    public String postRaiseBalance(@RequestParam String name) {
     raiseBalance(name);
     return "redirect:/list";
   }

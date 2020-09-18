@@ -14,8 +14,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class RedController {
 
-  //  private final RedRepository redRepository;
   private final RedService redService;
+
+//  @RequestMapping(value = "/setup", method = RequestMethod.GET)
+//  public String addSomRedsForTesting() {
+//    Red red1 = new Red("post", "url");
+//    Red red2 = new Red("post", "url");
+//    Red red3 = new Red("post", "url");
+//    Red red4 = new Red("post", "url");
+//    Red red5 = new Red("post", "url");
+//    redService.add(red1);
+//    redService.add(red2);
+//    redService.add(red3);
+//    redService.add(red4);
+//    redService.add(red5);
+//    return "redirect:";
+//  }
 
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String renderLandingPage(Model model) {
@@ -28,12 +42,6 @@ public class RedController {
     return "submit";
   }
 
-//  @RequestMapping(value = "/submit", method = RequestMethod.POST)
-//  public String addNewRed(@RequestParam(name = "newpost") String newpost) {
-//    redService.add(newpost);
-//    return "redirect:";
-//  }
-
   @RequestMapping(value = "/submit", method = RequestMethod.POST)
   public String addNewRed(@ModelAttribute Red red) {
     redService.add(red);
@@ -43,13 +51,13 @@ public class RedController {
   @RequestMapping(value = "/upvote", method = RequestMethod.POST)
   public String increaseVoteCountByOne(@RequestParam(name = "id") long id) {
     redService.increaseVoteCount(id);
-    return "redirect:";
+    return "redirect:/";
   }
 
   @RequestMapping(value = "/downvote", method = RequestMethod.POST)
   public String decreaseVoteCountByOne(@RequestParam(name = "id") long id) {
     redService.decreaseVoteCount(id);
-    return "redirect:";
+    return "redirect:/";
   }
 
   @RequestMapping(value = "/cheat", method = RequestMethod.GET)
@@ -57,21 +65,11 @@ public class RedController {
     model.addAttribute("reddit", redService.findRedById(id));
     return "cheat";
   }
-//  public String getFoos(@RequestParam String id) {
 
-
-
-
-
-  @RequestMapping(value = "/cheat/addtoscore", method = RequestMethod.POST)
-  public String increaseScoreOfARed(@RequestParam(name = "id") long id, int amountToChangeTheScoreWith) {
-    redService.addToScore(id, amountToChangeTheScoreWith);
-    return "redirect:";
-  }
-
-  @RequestMapping(value = "/cheat/takefromscore", method = RequestMethod.POST)
-  public String decreaseScoreOfARed(@RequestParam(name = "id") long id, int amountToChangeTheScoreWith) {
-    redService.takeFromScore(id, amountToChangeTheScoreWith);
+  @RequestMapping(value = "/cheat", method = RequestMethod.POST)
+  public String changeScoreOfARed(@RequestParam(name = "id") long id,
+                                  int amountToChangeTheScoreWith, String vote) {
+    redService.changeScore(id, amountToChangeTheScoreWith, vote);
     return "redirect:";
   }
 

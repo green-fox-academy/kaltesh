@@ -1,9 +1,11 @@
 package com.postman.postman.controllers;
 
+import com.postman.postman.models.Append;
 import com.postman.postman.models.ErrorMessage;
 import com.postman.postman.models.Greeting;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,4 +34,8 @@ public class GreeterController {
     return ResponseEntity.status(HttpStatus.OK).body(new Greeting(name, title));
   }
 
+  @RequestMapping(value = "/appenda/{appendable}", method = RequestMethod.GET)
+  public ResponseEntity getGreeting(@PathVariable String appendable) {
+    return ResponseEntity.status(HttpStatus.OK).body(new Append(appendable));
+  }
 }
